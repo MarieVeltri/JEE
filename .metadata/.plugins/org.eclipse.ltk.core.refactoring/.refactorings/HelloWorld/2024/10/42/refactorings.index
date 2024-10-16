@@ -1,0 +1,4 @@
+1729063174552	Rename type 'ClientAuthentication'
+1729063188056	Rename type 'Snippet'
+1729063291953	Move 'webV1.xml' to 'webapp'
+1729063296246	Move 'webV1.xml' to 'WEB-INF'

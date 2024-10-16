@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affichage du Logo</title>
+</head>
+<body>
+
+    <h1>Bienvenue sur la page d'exemple</h1>
+
+    <!-- Affichage de l'image LogoCondorcet.jpg -->
+    <img src="images/LogoCondorcet.jpg" alt="Logo Condorcet" style="width:300px; height:auto;">
+
+    <p>Ceci est un exemple d'image tirée du dossier <strong>webapp/images</strong>.</p>
+
+</body>
+</html>

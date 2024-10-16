@@ -1,0 +1,90 @@
+package be.veltri.serie01;
+
+import java.io.*;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class Exercice4
+ */
+@WebServlet("/Exercice4")
+public class Exercice4 extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+	private FileInputStream fileInputStream;
+    private String FILE_OPEN = "";
+    
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public Exercice4() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+    
+    private void openFile(String filePath) throws IOException {
+        File file = new File(filePath);
+        fileInputStream = new FileInputStream(file);
+        FILE_OPEN = filePath; // Met à jour la variable globale
+        System.out.println("Fichier ouvert : " + FILE_OPEN);
+    }
+
+    private void closeFile() {
+        if (fileInputStream != null) {
+            try {
+                fileInputStream.close();
+                FILE_OPEN = ""; // Réinitialise la variable globale
+                System.out.println("Fichier fermé.");
+            } catch (IOException e) {
+                System.out.println("Erreur lors de la fermeture du fichier : " + e.getMessage());
+            }
+        }
+    }
+    
+	/**
+	 * @see Servlet#init(ServletConfig)
+	 */
+	public void init(ServletConfig config) throws ServletException {
+		super.init(config);
+        ServletContext context = config.getServletContext();
+        String filePath = context.getInitParameter("filePath");
+
+        try {
+            openFile(filePath); // Ouvre le fichier
+        } catch (IOException e) {
+            throw new ServletException("Erreur lors de l'ouverture du fichier : " + e.getMessage());
+        }
+	}
+
+	/**
+	 * @see Servlet#destroy()
+	 */
+	public void destroy() {
+		closeFile(); // Ferme le fichier
+        super.destroy();
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		 response.setContentType("text/html");
+	        response.getWriter().println("<html><head><title>Exercice 4</title></head>");
+	        response.getWriter().println("<body><h1>Exercice 4</h1><p>Le fichier a été ouvert et fermé correctement.</p></body></html>");
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}
