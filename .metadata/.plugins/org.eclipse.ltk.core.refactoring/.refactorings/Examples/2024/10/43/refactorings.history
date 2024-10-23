@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename package &apos;servlets&apos; to &apos;be.veltri.servlets&apos;&#x0D;&#x0A;- Original project: &apos;Examples&apos;&#x0D;&#x0A;- Original element: &apos;Examples/src/main/java/servlets&apos;&#x0D;&#x0A;- Renamed element: &apos;Examples/src/main/java/be.veltri.servlets&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;servlets&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src\/main\/java&lt;servlets" name="be.veltri.servlets" qualified="false" references="true" stamp="1729695352934" textual="false" version="1.0"/>
-</session>

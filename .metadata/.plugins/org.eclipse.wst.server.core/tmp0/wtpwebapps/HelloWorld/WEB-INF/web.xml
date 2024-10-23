@@ -60,14 +60,4 @@
     <url-pattern>/ClientAuthentication</url-pattern>
     
   </servlet-mapping>
-  
-  <servlet>
-    <servlet-name>ReadClient</servlet-name>
-    <servlet-class>be.veltri.servlet.ReadClient</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-    <servlet-name>ReadClient</servlet-name>
-    <url-pattern>/ReadClient</url-pattern>
-  </servlet-mapping>
 </web-app>
