@@ -16,6 +16,7 @@ public class Client implements Serializable {
         this.username = username;
         this.email = email;
     }
+    //ke,pzfnzpef
 
     public String getUsername() {
         return username;
